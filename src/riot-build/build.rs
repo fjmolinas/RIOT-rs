@@ -140,7 +140,7 @@ fn main() {
 
     // instruct cargo to link in newlib
     println!(
-        "cargo:rustc-link-arg=-L/usr/arm-none-eabi/lib/{}",
+        "cargo:rustc-link-arg=-L/usr/lib/arm-none-eabi/newlib/{}",
         env::var("NEWLIB_ARCH").expect("missing NEWLIB_ARCH")
     );
     println!("cargo:rustc-link-arg=-lc_nano");

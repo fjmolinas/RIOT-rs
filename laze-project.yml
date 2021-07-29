@@ -12,7 +12,7 @@ context:
       RUSTFLAGS:
         - "-Clink-arg=-Tlink.x"
         # use clang/lld to link, enables cross-language LTO:
-        - "-Clinker-plugin-lto -Clinker=clang -Clink-arg=-fuse-ld=lld -Clink-arg=--target=${RUSTC_TARGET}"
+        # - "-Clinker-plugin-lto -Clinker=clang -Clink-arg=-fuse-ld=lld -Clink-arg=--target=${RUSTC_TARGET}"
       FEATURES:
         - riot-rs-boards/${BOARD}
       SCRIPTS: scripts
